@@ -3,6 +3,8 @@
  */
 package modelo;
 
+import java.util.Objects;
+
 /**
  * @author David
  *
@@ -152,5 +154,25 @@ public class Planeta {
 		}
 		return false;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(nombre);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Planeta other = (Planeta) obj;
+		return Objects.equals(nombre, other.nombre);
+	}
+	
+	
+	
 	
 }
