@@ -34,7 +34,15 @@ public class PruebaSistemaSolar {
 		sistema.insertaPlaneta(p1);
 		System.out.println("El sistema solar es: "+sistema);
 		
-
+		p1 = new Planeta("mercurio", 0, 3.302E23, 6.083E10, 
+				4879, 57, "TERRESTRE", false);
+		sistema.insertaPlaneta(p1);
+		
+		p1 = new Planeta("tierra", 1, 5.9736E24, 1.08321E12, 
+				6371, 1, "TERRESTRE", false);
+		sistema.insertaPlaneta(p1);
+		System.out.println("l sistema es "+sistema);
+		
 		Scanner teclado = new Scanner(System.in);
 		
 		System.out.println("Introduce nombre del planeta a buscar:");
@@ -49,6 +57,11 @@ public class PruebaSistemaSolar {
 		} else {
 			System.out.println("Planeta no encontrado");
 		}
+		System.out.println("el planeta mas denso es "
+		                   +sistema.planetaMasDenso());
+		
+		
+		
 	}
 
 }

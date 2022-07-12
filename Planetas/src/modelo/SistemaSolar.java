@@ -57,8 +57,20 @@ public class SistemaSolar {
 		int i=0;
 		for (Planeta planeta : lista) {
 			res=res+ "Planeta "+i+ " "+planeta+"\n";
+			i++;
 		}
 		return res;
+	}
+	
+	public Planeta planetaMasDenso() {
+		Planeta denso = lista.get(0);
+		for (Planeta planeta : lista) {
+			if (planeta.densidad()>denso.densidad()) {
+				denso=planeta;
+			}
+		}
+		return denso;
+		
 	}
 	
 }
